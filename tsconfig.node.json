@@ -4,6 +4,7 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "typeRoots": ["node_modules/@types/node"],
     "allowSyntheticDefaultImports": true,
     "strict": true
   },

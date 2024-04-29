@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 import { Button, Flex, Image, Table, Text, Title } from "./styles";
 import { IFilm, ResponseFilms } from "../../types/films";
+import type { TableProps } from "antd";
 
-import type { ColumnsType } from "antd/es/table";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const apiUrl = " https://api.kinopoisk.dev/v1.4/";
 
 const maxPage = 100;
 
-const columns: ColumnsType<IFilm> = [
+const columns: TableProps<IFilm>["columns"] = [
    {
       title: "Id",
       dataIndex: "id",
@@ -96,7 +96,7 @@ const FilmsTable: FC = () => {
 
    return (
       <div className="container">
-         <Table dataSource={dataSource} columns={columns} loading={isLoading} pagination={false} />
+         <Table columns={columns} dataSource={dataSource} loading={isLoading} pagination={false} />
          <Flex gap="middle" justify="center">
             <Button onClick={() => setPage(page - 1)} disabled={page === 1}>
                Назад
