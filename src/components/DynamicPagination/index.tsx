@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import { IFilm, ResponseFilms } from "../../types/films";
+import { ResponseFilms } from "../../types/films";
 import CardFilm from "../CardFilm";
 import { Row, Col, Spin, Empty } from "antd";
 import axios from "axios";
@@ -58,7 +58,7 @@ const DymanicPagination: FC = () => {
                {data.pages.map((el) =>
                   el?.films.map((film, i) => (
                      <Col key={i} sm={12} md={4}>
-                        <CardFilm testid={"movies"} film={film} />
+                        <CardFilm film={film} />
                      </Col>
                   )),
                )}

@@ -1,10 +1,8 @@
 import React, { FC } from "react";
 import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 
-import { FILMS, HOME,FILM } from "./config";
-import { FilmsPage, HomePage,FilmPage } from "../../pages";
-
-
+import { FILMS, HOME, FILM } from "./config";
+import { FilmsPage, HomePage, FilmPage } from "../../pages";
 
 const MainRouter: FC = () => {
    const resultPaths: RouteObject[] = [

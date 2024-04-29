@@ -7,8 +7,7 @@ import { Switch, Text, Flex } from "./styles";
 type TView = "cards" | "table";
 
 const Films: FC = () => {
-   const [view, setView] = useState<TView>("table");
-   console.log(view);
+   const [view, setView] = useState<TView>("cards");
    const toggleView = () => {
       setView((prev) => (prev === "cards" ? "table" : "cards"));
    };
@@ -19,8 +18,8 @@ const Films: FC = () => {
             <Switch
                title="Вид"
                onChange={() => toggleView()}
-               checkedChildren={<AppstoreFilled size={48} />}
-               unCheckedChildren={<DatabaseFilled size={48} />}
+               checkedChildren={<DatabaseFilled size={48} />}
+               unCheckedChildren={<AppstoreFilled size={48} />}
             />
             <Text>{view === "cards" ? "Карточки" : "Таблица"}</Text>
          </Flex>

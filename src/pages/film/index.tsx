@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import DymanicPagination from "../../components/DynamicPagination";
+import Film from "../../components/Film";
 
 const FilmPage: FC = () => {
-   return <DymanicPagination />;
+   return <Film />;
 };
 
 export default FilmPage;

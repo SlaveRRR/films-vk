@@ -4,6 +4,7 @@ import { IFilm, ResponseFilms } from "../../types/films";
 
 import type { ColumnsType } from "antd/es/table";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const LIMIT = 10;
 const apiUrl = " https://api.kinopoisk.dev/v1.4/";
@@ -54,6 +55,12 @@ const columns: ColumnsType<IFilm> = [
       dataIndex: "rating",
       key: "rating",
       render: (_, { rating }) => rating.kp,
+   },
+   {
+      title: "Link",
+      dataIndex: "link",
+      key: "link",
+      render: (_, { id }) => <Link to={`/films/${id}`}>К фильму</Link>,
    },
 ];
 
