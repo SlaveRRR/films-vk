@@ -91,7 +91,7 @@ const Film: FC = () => {
                {(data?.similarMovies || data?.sequelsAndPrequels) && (
                   <Flex vertical>
                      <Title level={3}>Похожие фильмы</Title>
-                     <Flex wrap="wrap" gap={10}>
+                     <Flex justify="center" wrap="wrap" gap={10}>
                         {data?.similarMovies && data?.similarMovies.map((el) => <CardSimilar key={el.id} film={el} />)}
                         {data?.sequelsAndPrequels &&
                            data?.sequelsAndPrequels.map((el) => <CardSimilar key={el.id} film={el} />)}

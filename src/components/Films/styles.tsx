@@ -21,10 +21,4 @@ export const Switch = styled(antdSwitch)`
    &.ant-switch {
       background: #1677ff;
    }
-   &.ant-switch .ant-switch-inner .ant-switch-inner-checked {
-      display: flex;
-   }
-   &.ant-switch .ant-switch-inner .ant-switch-inner-unchecked {
-      display: flex;
-   }
 `;

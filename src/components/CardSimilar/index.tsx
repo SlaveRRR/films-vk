@@ -19,7 +19,7 @@ const CardSimilar: FC<ICardFilmProps> = ({ film: { name, poster } }) => {
                onClick={(e) => e.stopPropagation()}
                src={poster.previewUrl}
                style={{
-                  width: "180px",
+                  width: "240px",
                   height: "100%",
                   objectFit: "cover",
                }}

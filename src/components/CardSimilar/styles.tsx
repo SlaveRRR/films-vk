@@ -7,7 +7,7 @@ export const { Meta } = antdCard;
 
 export const Card = styled(antdCard)`
    & {
-      width: 180px;
+      width: 240px;
       border: 1px solid black;
    }
 `;
